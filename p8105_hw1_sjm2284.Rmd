@@ -17,9 +17,11 @@ data("penguins", package = "palmerpenguins")
 ```
 
 
-Display the dataset, load library (dplyr) to allow for pull function to work,get the number of rows and columns, find the mean flipper length
+Load library to allow for pull function, display the dataset, ,get the number of rows and columns, find the mean flipper length
 
-```{r penguins_dataset, eval=FALSE}
+
+```{r penguins_dataset,message= FALSE}
+
 library(dplyr)
 
 summary (penguins)
@@ -28,7 +30,6 @@ penguins_rows = nrow(penguins)
 penguins_column = ncol(penguins)
  
 mean(pull(penguins, flipper_length_mm), na.rm = TRUE)
-
 
      
 ```
