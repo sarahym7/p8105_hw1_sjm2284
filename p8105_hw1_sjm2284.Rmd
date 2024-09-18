@@ -39,6 +39,19 @@ There are a total of 152 Adelie, 68 Chinstrap, and 124 Gentoo. There are also 16
 size of the dataset is `r nrow(penguins)` and `r ncol(penguins)`. The mean flipper length is also `mean(pull(penguins, flipper_length_mm))`.
 
 
+Creating the scatterplot for penguins, load libraries to use function for plot formation and ggsave to save plot 
+
+```{r penguin_scatter, message= FALSE}
+
+library(tidyverse)
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(drop_na(penguins), aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+ggsave("penguins_scatter.pdf")
+
+```
 
 
 
