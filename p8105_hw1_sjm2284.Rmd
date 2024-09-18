@@ -1,0 +1,45 @@
+---
+title: "Homework1"
+author: "Sarahy Martinez"
+date: "2024-09-16"
+output: html_document
+---
+
+
+# Problem 1
+
+Load the dataset
+
+```{r download_data}
+
+data("penguins", package = "palmerpenguins")
+
+```
+
+
+Display the dataset, load library (dplyr) to allow for pull function to work,get the number of rows and columns, find the mean flipper length
+
+```{r penguins_dataset}
+library(dplyr)
+
+summary (penguins)
+
+penguins_rows = nrow(penguins)
+penguins_column = ncol(penguins)
+ 
+mean(pull(penguins, flipper_length_mm), na.rm = TRUE)
+
+
+     
+```
+
+In the dataset we can find the species, island, bill length, bill depth, flipper length, body mass, sex, and year. 
+There are a total of 152 Adelie, 68 Chinstrap, and 124 Gentoo. There are also 165 females and 168 males. The 
+size of the dataset is `r nrow(penguins)` and `r ncol(penguins)`. The mean flipper length is also `mean(pull(penguins, flipper_length_mm))`.
+
+
+
+
+
+
+
