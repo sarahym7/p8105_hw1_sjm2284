@@ -71,4 +71,4 @@ means = tibble(
 
 ```
 
-What works when writing a code chunk that applies the as.numeric function to the logical, character, and factor variable are the logical and factor variable but not the character vector. The "as.numeric" function is used to convert non-numerical values to numerical values. As a result, we are able to convert factors and logical vectors to numerical, however character cannot be transformed possibly due to formatting or we need to apply as.character to the non-numeric characters.
+What works when writing a code chunk that applies the as.numeric function to the logical, character, and factor variable are the logical and factor variable but not the character vector. The "as.numeric" function is used to convert non-numerical values to numerical values. As a result, we are able to convert factors and logical vectors to numerical, however character cannot be transformed possibly due to formatting or we need to apply as.character to transform the non-numeric character into numerics.
