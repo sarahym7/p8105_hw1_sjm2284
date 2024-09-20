@@ -54,7 +54,7 @@ ggsave("penguins_scatter.pdf")
 
 creating dataframe and calculating means 
 
-```{r dataframe, results='hide'}
+```{r dataframe, results='hide', warning=FALSE}
 problem_2 = tibble(
   norm_samp = rnorm(10),
   norm_samp_pos = norm_samp >0,
