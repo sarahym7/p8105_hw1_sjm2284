@@ -11,7 +11,7 @@ output: github_document
 Load the dataset
 
 ```{r download_data}
-
+library(tidyverse)
 data("penguins", package = "palmerpenguins")
 
 ```
@@ -21,8 +21,6 @@ Load library to allow for pull function, display the dataset, ,get the number of
 
 
 ```{r penguins_dataset,message= FALSE}
-
-library(dplyr)
 
 summary (penguins)
 
@@ -43,7 +41,6 @@ Creating the scatterplot for penguins, load libraries to use function for plot f
 
 ```{r penguin_scatter, message= FALSE}
 
-library(tidyverse)
 library(ggplot2)
 library(palmerpenguins)
 
@@ -65,7 +62,7 @@ problem_2 = tibble(
   factor_vector =  factor(sample(c("Level1", "Level2", "Level3"), 10, replace = TRUE))
 )
 
-means <- tibble(
+means = tibble(
   norm_samp_mean = mean(pull(problem_2, norm_samp)),
   norm_samp_pos_mean = mean(as.numeric(pull(problem_2, norm_samp_pos))),
   character_vec_mean = mean(as.numeric(pull(problem_2, character_vec))),
