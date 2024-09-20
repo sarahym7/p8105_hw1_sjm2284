@@ -10,8 +10,9 @@ output: github_document
 
 Load the dataset
 
-```{r download_data}
+```{r download_data, message= FALSE}
 library(tidyverse)
+library(palmerpenguins)
 data("penguins", package = "palmerpenguins")
 
 ```
@@ -22,14 +23,14 @@ Load library to allow for pull function, display the dataset, ,get the number of
 
 ```{r penguins_dataset,message= FALSE}
 
-summary (penguins)
+summary(penguins)
 
 penguins_rows = nrow(penguins)
+
 penguins_column = ncol(penguins)
- 
+
 mean(pull(penguins, flipper_length_mm), na.rm = TRUE)
 
-     
 ```
 
 In the dataset we can find the species, island, bill length, bill depth, flipper length, body mass, sex, and year. 
