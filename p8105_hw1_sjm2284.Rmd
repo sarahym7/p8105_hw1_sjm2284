@@ -8,7 +8,7 @@ output: github_document
 
 # Problem 1
 
-Load the dataset
+Load the dataset and libraries
 
 ```{r download_data, message= FALSE}
 library(tidyverse)
@@ -18,7 +18,7 @@ data("penguins", package = "palmerpenguins")
 ```
 
 
-Load library to allow for pull function, display the dataset, ,get the number of rows and columns, find the mean flipper length
+Display the dataset, ,get the number of rows and columns, find the mean flipper length
 
 
 ```{r penguins_dataset,message= FALSE}
@@ -55,6 +55,7 @@ ggsave("penguins_scatter.pdf")
 # Problem 2
 
 creating dataframe and calculating means 
+
 ```{r dataframe, eval=FALSE}
 problem_2 = tibble(
   norm_samp = rnorm(10),
