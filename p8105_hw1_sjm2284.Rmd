@@ -12,6 +12,7 @@ Load the dataset and libraries
 
 ```{r download_data, message= FALSE}
 library(tidyverse)
+library(ggplot2)
 library(palmerpenguins)
 data("penguins", package = "palmerpenguins")
 
@@ -41,9 +42,6 @@ size of the dataset is `r nrow(penguins)` and `r ncol(penguins)`. The mean flipp
 Creating the scatterplot for penguins, load libraries to use function for plot formation and ggsave to save plot 
 
 ```{r penguin_scatter, message= FALSE}
-
-library(ggplot2)
-library(palmerpenguins)
 
 ggplot(drop_na(penguins), aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 
